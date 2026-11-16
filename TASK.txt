@@ -1,0 +1,21 @@
+You are building a competition entry for make.fun bounty makefun-frontend-01 in this repository (git repo /home/agentuser/mfef).
+
+Task: build the best make.fun frontend - a static, no-build-step web app in app/ that reads make.fun's public API (https://make.fun/api, CORS open, GET only; OpenAPI at https://make.fun/api/openapi.json, agent docs at https://make.fun/llms.txt). Read competition.yaml and app/ first to understand the starter (house anchor 2-plain: board + bounty page, hash routes).
+
+Required surfaces, each reachable by link AND its own URL:
+1. live bounty board - each bounty's live pot, entry fee, time left, submission count
+2. a bounty's page - full details from the API
+3. its leaderboard - ranked entries
+4. an account's public profile
+
+The judge ranks: fully functioning FIRST, then runtime performance, then first-load speed (raw+gzip bytes - keep app/ tiny, no framework, no vendored JS), then ease of use.
+
+Requirements: phone layout, keyboard and screen-reader accessible, ETag/If-None-Match caching where the API exposes it, open-source LICENSE stays. Keep app/ under 16 MiB, index.html under 1 MiB, ES modules only, scripts must parse, only allowed external origin is https://make.fun.
+
+Improve on the starter substantially: better design, real leaderboard and profile views, proper loading/error/empty states, relative time formatting, auto-refresh.
+
+Verify by serving the app locally (python3 -m http.server works) and take 3 screenshots of the app on LIVE data into screenshots/ (PNG or JPEG, long side <=1280, short side >=360, <=256KiB each; cover first by name; use puppeteer-core with chrome at /opt/ms-playwright/chromium-1208/chrome-linux64/chrome, headless args --no-sandbox --disable-gpu --enable-unsafe-swiftshader; the starter's shots.json documents views; you may need to symlink node_modules from /home/agentuser/fps-entry/node_modules for puppeteer-core).
+
+Then run mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts and verify out/ has app/, screenshots/, dossier.json. Run node --check on every JS file in app/. git add -A and commit with a clear message when done.
+
+Finish by printing ENTRY COMPLETE plus a summary. Never print API keys or tokens.

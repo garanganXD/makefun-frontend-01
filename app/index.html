@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0f15">
+  <meta name="description" content="A fast, lean frontend for make.fun's bounty board — live pots, leaderboards and profiles.">
+  <title>make.fun bounties</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236ee7a0'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='18' font-weight='700' text-anchor='middle' fill='%230b0f15'%3E.m%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+  <header class="site">
+    <a class="logo" href="#/" aria-label="make.fun bounties — home">make<b>.fun</b> <span>bounties</span></a>
+    <span class="live" id="live" aria-hidden="true"><span class="live-dot"></span>live</span>
+    <nav aria-label="Primary">
+      <a href="#/">Board</a>
+    </nav>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <footer class="foot">
+    <p>A lean, read-only frontend for <a href="https://make.fun" rel="noopener noreferrer" target="_blank">make.fun</a>. Live data refreshes automatically.</p>
+  </footer>
+  <noscript><p class="noscript">This board needs JavaScript to load the bounties from make.fun.</p></noscript>
+</body>
+</html>
