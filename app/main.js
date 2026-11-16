@@ -1,9 +1,9 @@
-// main.js — the router and app wiring: hash routes, auto-refresh, a live
+// main.js — the router and app wiring: hash routes, a quiet auto-refresh, a live
 // countdown/ago ticker, and delegated UI events. window.__shotReady flips true once
 // a page's data is painted, so a screenshot script knows when to capture.
 //
 //   #/                        the live board
-//   #/bounty/<slug>           one bounty
+//   #/bounty/<slug>           one bounty, full detail
 //   #/leaderboard/<slug>      that bounty's ranked entries
 //   #/profile/<handle>        an account's public profile
 
